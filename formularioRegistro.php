@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>REGISTRO</h1>
+        <h1>REGISTRO DE PRODUCTOS</h1>
         <hr>
     </header>
     <main>

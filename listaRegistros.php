@@ -34,7 +34,7 @@ $productos=$transaccion->buscarDatos($consultaSQL);
                 <img src="..." class="card-img-top" alt="...">
                      <div class="card-body">
                         <h5 class="card-title"><?php echo($producto["nombreProducto"])?></h5>
-                        <p class="card-text"><?php echo($producto["precioProducto"])?></p>
+                        <p class="card-text"><?php echo($producto["marcaProducto"])?></p>
                         <p class="card-text"><?php echo($producto["precioProducto"])?></p>
                         <p class="card-text"><?php echo($producto["descripcionProducto"])?></p>
                     </div>
