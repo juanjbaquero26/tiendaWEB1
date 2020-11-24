@@ -31,12 +31,13 @@ $productos=$transaccion->buscarDatos($consultaSQL);
         <?php foreach($productos as $producto):?>
             <div class="col mb-4">
                 <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                     <div class="card-body">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
                         <h5 class="card-title"><?php echo($producto["nombreProducto"])?></h5>
                         <p class="card-text"><?php echo($producto["marcaProducto"])?></p>
                         <p class="card-text"><?php echo($producto["precioProducto"])?></p>
                         <p class="card-text"><?php echo($producto["descripcionProducto"])?></p>
+                        <a href="eliminarUsuarios.php?id=<?php echo($usuario["idProducto"])?>" class="btn btn-danger">Eliminar</a>
                     </div>
                 </div>
             </div>

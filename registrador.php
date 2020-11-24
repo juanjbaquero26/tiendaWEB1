@@ -9,12 +9,13 @@
         $precio=$_POST["precio"];
         $descripcion=$_POST["descripcion"];
         $marca=$_POST["marcaProducto"];
+        $foto=$_POST["foto"]
 
       
         $transaccion= new BaseDatos();
         
        
-        $consultaSQL="INSERT INTO productos(nombreProducto,marcaProducto,descripcionProducto,precioProducto) VALUES ('$nombre','$marca','$descripcion','$precio')";
+        $consultaSQL="INSERT INTO productos(nombreProducto,marcaProducto,descripcionProducto,precioProducto,foto) VALUES ('$nombre','$marca','$descripcion','$precio','$foto')";
 
        
         $transaccion->agregarDatos($consultaSQL);
