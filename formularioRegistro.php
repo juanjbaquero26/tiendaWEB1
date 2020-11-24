@@ -10,13 +10,14 @@
     <header>
         <h1>REGISTRO DE PRODUCTOS</h1>
         <hr>
+        <a href="listaRegistros.php">lista de productos</a>
     </header>
     <main>
         <div class="container ">
             <form action="registrador.php" method="POST">
                 <div class="row">
                     <div class="col">
-                    <h1 class="text-center">administracion de productos</h1>
+                    <h1 class="text-center">administracion de productos deportivos</h1>
                     </div>
                 </div>
                 

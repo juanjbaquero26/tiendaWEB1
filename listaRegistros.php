@@ -62,6 +62,10 @@ $productos=$transaccion->buscarDatos($consultaSQL);
                                         <label>Descripción:</label>
                                         <textarea class="form-control" name="descripcionEditar"> <?php echo($producto["descripcionProducto"])?>  </textarea>
                                     </div>
+                                    <div class="form-group">
+                                        <label>precio</label>
+                                        <textarea class="form-control" name="precio"> <?php echo($producto["precioProducto"])?>  </textarea>
+                                    </div>
                                     <button type="submit" class="btn btn-info" name="botonEditar">Editar</button>
                                 </form>
                             </div>
