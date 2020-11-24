@@ -13,7 +13,7 @@
 //Hacer una consulta en BD para tarer todos los usuarios
 
 //1. Incluir el archivo donde esta nuestra clase BaseDatos
-include("BaseDatos.php");
+include("baseDatos.php");
 
 //2. Crear la consulta SQL para buscar datos
 $consultaSQL="SELECT * FROM productos WHERE 1";
@@ -31,13 +31,42 @@ $productos=$transaccion->buscarDatos($consultaSQL);
         <?php foreach($productos as $producto):?>
             <div class="col mb-4">
                 <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?php echo($producto["foto"])?>" class="card-img-top" alt="imagen">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo($producto["nombreProducto"])?></h5>
                         <p class="card-text"><?php echo($producto["marcaProducto"])?></p>
                         <p class="card-text"><?php echo($producto["precioProducto"])?></p>
                         <p class="card-text"><?php echo($producto["descripcionProducto"])?></p>
-                        <a href="eliminarUsuarios.php?id=<?php echo($usuario["idProducto"])?>" class="btn btn-danger">Eliminar</a>
+                        <a href="eliminarUsuarios.php?id=<?php echo($producto["idProducto"])?>" class="btn btn-danger">Eliminar</a>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar<?php echo($producto["idProducto"])?>">
+                        editar
+                        </button>
+                    </div>
+                </div>
+                <div class="modal fade" id="editar<?php echo($producto["idProducto"])?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="editarUsuario.php?id=<?php echo($producto["idProducto"]) ?>" method="POST">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control" name="nombreEditar" value="<?php echo($producto["nombreProducto"])?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Descripción:</label>
+                                        <textarea class="form-control" name="descripcionEditar"> <?php echo($producto["descripcionProducto"])?>  </textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-info" name="botonEditar">Editar</button>
+                                </form>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

@@ -33,19 +33,19 @@
                 <div class="row mt-3">
                     
                     <div class="col">
-                        <label class="font-weight-bold">Descripción del prodcuto:</label>
+                        <label class="font-weight-bold">Descripción del producto:</label>
                         <textarea class="form-control" rows="3" name="descripcion"></textarea>
                     </div>
                 </div>
-                
                 <div class="row mt-3">
                     <div class="col">
                         <label class="font-weight-bold">FOTO:</label>
                         <input type="text" class="form-control" placeholder="Foto URL" name="foto">
                     </div>
                 </div>
+                
                 <div class="row mt-3">
-                    <div class="col">
+                <div class="col">
                         <input type="text" class="form-control" placeholder="precio del producto" name="precio">
                     </div>
                 </div>

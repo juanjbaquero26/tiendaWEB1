@@ -9,7 +9,7 @@
         $precio=$_POST["precio"];
         $descripcion=$_POST["descripcion"];
         $marca=$_POST["marcaProducto"];
-        $foto=$_POST["foto"]
+        $foto=$_POST["foto"];
 
       
         $transaccion= new BaseDatos();

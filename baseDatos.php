@@ -84,7 +84,6 @@ public function eliminarDatos($consultaSQL){
     }
 
 }
-
 public function editarDatos($consultaSQL){
 
     //1. Conectarme a la BD
@@ -104,9 +103,6 @@ public function editarDatos($consultaSQL){
     }
 
 }
-
-
-
 }
 
 ?>
